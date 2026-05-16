@@ -17,7 +17,7 @@ export default function About() {
           <div className="relative overflow-hidden rounded-[40px] shadow-2xl">
 
             <Image
-              src="/images/about.jpg"
+              src="/senora.jpg"
               alt="Sobre nosotros"
               width={700}
               height={850}

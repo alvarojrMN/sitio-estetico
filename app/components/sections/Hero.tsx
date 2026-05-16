@@ -85,7 +85,7 @@ export default function Hero() {
           {/* Image */}
           <div className="relative overflow-hidden rounded-[40px]">
             <Image
-              src="/images/hero.jpg"
+              src="/terapia.jpg"
               alt="Hero estética"
               width={700}
               height={900}

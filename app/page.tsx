@@ -18,12 +18,6 @@ export default function Home() {
       <Testimonials />
       <Contact />
 
-      <section className="h-screen flex items-center justify-center">
-        <h1 className="text-6xl font-bold text-[#4D5B46]">
-          Clínica Estética
-        </h1>
-      </section>
-
     </main>
   );
 }

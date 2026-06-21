@@ -9,7 +9,9 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="bg-[#F7F3EE] px-4 py-28">
+    <section
+    id="contacto"
+    className="bg-[#F7F3EE] px-4 py-28 scroll-mt-32">
 
       <div className="max-w-7xl mx-auto">
 
@@ -55,9 +57,14 @@ export default function Contact() {
                     Dirección
                   </h4>
 
-                  <p className="text-[#6B6B6B]">
-                    Calle 123 #45-67, Bogotá, Colombia
-                  </p>
+                 <a
+                    href="https://maps.google.com/?q=Cra 70c #57r Sur-27, Bogotá"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
+                  >
+                     Cra. 70c #57r Sur-27, Bogotá, Colombia
+                  </a>
                 </div>
 
               </div>
@@ -74,9 +81,12 @@ export default function Contact() {
                     Teléfono
                   </h4>
 
-                  <p className="text-[#6B6B6B]">
-                    +57 300 000 0000
-                  </p>
+                  <a
+                    href="tel:+573124333517"
+                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
+                  >
+                    +57 312 433 3517
+                  </a>
                 </div>
 
               </div>
@@ -93,9 +103,12 @@ export default function Contact() {
                     Correo
                   </h4>
 
-                  <p className="text-[#6B6B6B]">
-                    contacto@estetica.com
-                  </p>
+                  <a
+                    href="mailto:storenye263@gmail.com"
+                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
+                  >
+                    storenye263@gmail.com               
+                   </a>
                 </div>
 
               </div>
@@ -124,13 +137,22 @@ export default function Contact() {
             {/* Socials */}
             <div className="flex gap-4 mt-12">
 
-              <button className="w-14 h-14 rounded-full bg-[#4D5B46] hover:bg-[#3E4A38] flex items-center justify-center transition duration-300">
-                <FaInstagram className="text-white" />
-              </button>
-
-              <button className="w-14 h-14 rounded-full bg-[#4D5B46] hover:bg-[#3E4A38] flex items-center justify-center transition duration-300">
-                <FaFacebookF className="text-white" />
-              </button>
+              <a
+              href="https://instagram.com/spa_vida.go"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 rounded-full bg-[#4D5B46] hover:bg-[#3E4A38] flex items-center justify-center transition duration-300"
+              >
+             <FaInstagram className="text-white" />
+              </a>
+              <a
+                  href="https://facebook.com/Marce Diaz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 rounded-full bg-[#4D5B46] hover:bg-[#3E4A38] flex items-center justify-center transition duration-300"
+                >
+                  <FaFacebookF className= "text-white" />
+                </a>
 
             </div>
 

@@ -5,15 +5,16 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Inicio", href: "/" },
-  { name: "Nosotros", href: "/" },
-  { name: "Procedimientos", href: "/" },
-  { name: "Depoimentos", href: "/" },
-  { name: "Contacto", href: "/" },
+  { name: "Inicio", href: "#inicio" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Procedimientos", href: "#procedimientos" },
+  { name: "Testimonios", href: "#testimonios" },
+  { name: "Contacto", href: "#contacto" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 px-4 py-4">
@@ -22,11 +23,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 py-4">
           
           {/* Logo */}
-          <div>
+          <Link href="/">
             <h1 className="text-2xl font-bold text-[#4D5B46]">
               Estética
             </h1>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -42,9 +43,14 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Button */}
-          <button className="hidden lg:block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-6 py-3 rounded-full transition duration-300">
-            Agendar cita
-          </button>
+            <a
+              href="https://wa.me/573124333517?text=Hola,%20quiero%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-6 py-3 rounded-full transition duration-300"
+            >
+              Agendar cita
+            </a>
 
           {/* Mobile Button */}
           <button
@@ -63,15 +69,21 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  onClick={() => setIsOpen(false)}
                   className="text-[#2E2E2E] hover:text-[#4D5B46] transition"
                 >
                   {link.name}
                 </Link>
               ))}
 
-              <button className="mt-4 bg-[#4D5B46] hover:bg-[#3E4A38] text-white py-3 rounded-full transition">
+              <a
+                href="https://wa.me/573124333517"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-6 py-3 rounded-full transition duration-300"
+              >
                 Agendar cita
-              </button>
+              </a>
             </nav>
           </div>
         )}

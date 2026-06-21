@@ -29,7 +29,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white px-4 py-28">
+    <section
+    id="testimonios"
+    className="bg-white px-4 py-28 scroll-mt-32">
 
       <div className="max-w-7xl mx-auto">
 
@@ -57,7 +59,7 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-[#F7F3EE] border border-[#E8DED1] rounded-[36px] p-8 hover:-translate-y-2 transition duration-500 shadow-sm hover:shadow-xl"
+              className="bg-[#F7F3EE] border border-[#E8DED1] rounded-[36px] p-8 hover:-translate-y-2 transition-all duration-500 shadow-sm hover:shadow-xl"
             >
 
               {/* Stars */}
@@ -109,6 +111,16 @@ export default function Testimonials() {
             </div>
           ))}
 
+        </div>
+        <div className="text-center mt-16">
+          <a
+            href="https://wa.me/573124333517?text=Hola,%20quiero%20agendar%20una%20valoración"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300"
+          >
+            Quiero una valoración
+          </a>
         </div>
 
       </div>

@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-[#F7F3EE] pt-36 px-4">
+    <section
+      id="inicio" 
+    className="min-h-screen bg-[#F7F3EE] pt-36 px-4 scroll-mt-32">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
 
         {/* LEFT CONTENT */}
@@ -31,13 +34,21 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 text-lg">
+            <a
+              href="https://wa.me/573124333517"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 text-lg text-center"
+            >
               Agendar cita
-            </button>
+            </a>
 
-            <button className="border border-[#4D5B46] text-[#4D5B46] hover:bg-[#4D5B46] hover:text-white px-8 py-4 rounded-full transition duration-300 text-lg">
+           <Link
+              href="#procedimientos"
+              className="border border-[#4D5B46] text-[#4D5B46] hover:bg-[#4D5B46] hover:text-white px-8 py-4 rounded-full transition duration-300 text-lg text-center"
+            >
               Ver servicios
-            </button>
+            </Link>
           </div>
 
           {/* Stats */}
@@ -89,13 +100,13 @@ export default function Hero() {
               alt="Hero estética"
               width={700}
               height={900}
-              className="w-full h-[700px] object-cover"
+              className="w-full h-[450px] md:h-[600px] lg:h-[700px] object-cover"
               priority
             />
           </div>
 
           {/* Floating Card */}
-          <div className="absolute bottom-6 -left-6 bg-white p-5 rounded-3xl shadow-xl max-w-xs">
+          <div className="absolute bottom-6 left-4 md:-left-6 bg-white p-5 rounded-3xl shadow-xl max-w-xs">
 
             <div className="flex items-center gap-4">
 

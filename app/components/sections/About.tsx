@@ -1,9 +1,13 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="bg-white px-4 py-28">
+    <section 
+      id="nosotros"
+
+    className="bg-white px-4 py-28 scroll-mt-32">
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
@@ -21,13 +25,12 @@ export default function About() {
               alt="Sobre nosotros"
               width={700}
               height={850}
-              className="w-full h-[700px] object-cover"
-            />
+              className="w-full h-[450px] md:h-[600px] lg:h-[700px] object-cover"/>
 
           </div>
 
           {/* Floating card */}
-          <div className="absolute bottom-8 -right-6 bg-white shadow-xl rounded-3xl p-6 max-w-xs">
+          <div className="absolute bottom-4 left-4 md:bottom-8 md:-right-6 md:left-auto bg-white shadow-xl rounded-3xl p-6 max-w-xs">
 
             <h4 className="text-4xl font-bold text-[#4D5B46] mb-2">
               +5K
@@ -123,9 +126,12 @@ export default function About() {
           </div>
 
           {/* Button */}
-          <button className="bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 text-lg">
+          <Link
+            href="#procedimientos"
+            className="inline-block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 text-lg"
+          >
             Conocer más
-          </button>
+          </Link>
 
         </div>
 

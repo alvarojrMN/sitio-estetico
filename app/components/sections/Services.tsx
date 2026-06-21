@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -26,7 +27,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-[#F7F3EE] px-4 py-28">
+    <section 
+    id="procedimientos"
+    className="bg-[#F7F3EE] px-4 py-28 scroll-mt-32">
 
       <div className="max-w-7xl mx-auto">
 
@@ -51,9 +54,12 @@ export default function Services() {
           </div>
 
           {/* Button */}
-          <button className="bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 w-fit">
+         <Link
+            href="/servicios"
+            className="bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 w-fit"
+          >
             Ver todos los servicios
-          </button>
+          </Link>
 
         </div>
 
@@ -61,10 +67,15 @@ export default function Services() {
         <div className="grid gap-8 lg:grid-cols-3">
 
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-[36px] overflow-hidden shadow-sm hover:shadow-2xl transition duration-500"
-            >
+              <a
+                key={index}
+                href={`https://wa.me/573124333517?text=${encodeURIComponent(
+                  `Hola, quiero información sobre ${service.title}`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-[36px] overflow-hidden shadow-sm hover:shadow-2xl transition duration-500 cursor-pointer block"
+              >            
 
               {/* Image */}
               <div className="overflow-hidden">
@@ -74,7 +85,7 @@ export default function Services() {
                   alt={service.title}
                   width={500}
                   height={600}
-                  className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700"
+                  className="w-full h-[280px] md:h-[360px] lg:h-[420px] object-cover group-hover:scale-105 transition duration-700"
                 />
 
               </div>
@@ -105,7 +116,7 @@ export default function Services() {
 
               </div>
 
-            </div>
+            </a>
           ))}
 
         </div>

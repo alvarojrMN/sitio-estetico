@@ -127,7 +127,7 @@ export default function About() {
 
           {/* Button */}
           <Link
-            href="#procedimientos"
+            href="/nosotros"
             className="inline-block bg-[#4D5B46] hover:bg-[#3E4A38] text-white px-8 py-4 rounded-full transition duration-300 text-lg"
           >
             Conocer más

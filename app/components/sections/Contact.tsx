@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   MapPin,
   Phone,
@@ -8,6 +10,62 @@ import {
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  service: "",
+});
+
+const [loading, setLoading] = useState(false);
+const [message, setMessage] = useState("");
+
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  setLoading(true);
+  setMessage("");
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setMessage("Solicitud enviada correctamente.");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+      });
+    } else {
+      setMessage("Ocurrió un error al enviar la solicitud.");
+    }
+  } catch (error) {
+    console.error(error);
+    setMessage("Error de conexión.");
+  }
+
+  setLoading(false);
+};
+
   return (
     <section
     id="contacto"
@@ -165,13 +223,16 @@ export default function Contact() {
               Solicita una cita
             </h3>
 
-            <form className="space-y-6">
-
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Nombre completo"
+                  required
                   className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
                 />
               </div>
@@ -180,7 +241,11 @@ export default function Contact() {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Correo electrónico"
+                  required
                   className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
                 />
               </div>
@@ -188,25 +253,76 @@ export default function Contact() {
               {/* Phone */}
               <div>
                 <input
-                  type="text"
-                  placeholder="Número telefónico"
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
-                />
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Número telefónico"
+                required
+                className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+              />
               </div>
 
               {/* Message */}
               <div>
-                <textarea
-                  placeholder="Escribe tu mensaje..."
-                  rows={5}
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition resize-none"
-                />
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                >
+                  <option value="" disabled>
+                    Selecciona un servicio
+                  </option>
+
+                  <option value="Limpieza Facial Premium">
+                    Limpieza Facial Premium
+                  </option>
+
+                  <option value="Skin Care Avanzado">
+                    Skin Care Avanzado
+                  </option>
+
+                  <option value="Tratamientos Corporales">
+                    Tratamientos Corporales
+                  </option>
+
+                  <option value="Reducción de Estrías">
+                    Reducción de Estrías
+                  </option>
+
+                  <option value="Moldeamiento Corporal">
+                    Moldeamiento Corporal
+                  </option>
+
+                  <option value="Disminución de Celulitis">
+                    Disminución de Celulitis
+                  </option>
+
+                  <option value="Toxina Botulínica">
+                    Toxina Botulínica
+                  </option>
+
+                  <option value="Ácido Hialurónico">
+                    Ácido Hialurónico
+                  </option>
+                </select>
               </div>
 
               {/* Button */}
-              <button className="w-full bg-[#4D5B46] hover:bg-[#3E4A38] text-white py-5 rounded-2xl transition duration-300 text-lg">
-                Enviar solicitud
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-[#4D5B46] hover:bg-[#3E4A38] disabled:opacity-60 text-white py-5 rounded-2xl transition duration-300 text-lg"
+              >
+                {loading ? "Enviando..." : "Enviar solicitud"}
               </button>
+              {message && (
+                <p className="text-center text-[#4D5B46] mt-4">
+                  {message}
+                </p>
+              )}
 
             </form>
 

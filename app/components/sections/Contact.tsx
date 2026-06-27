@@ -108,7 +108,7 @@ const handleSubmit = async (
                 href="https://maps.google.com/?q=Cra 70c #57r Sur-27, Bogotá"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <MapPin className="text-white" />
@@ -128,7 +128,7 @@ const handleSubmit = async (
               {/* Item */}
               <a
                 href="tel:+573124333517"
-                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Phone className="text-white" />
@@ -148,7 +148,7 @@ const handleSubmit = async (
               {/* Item */}
               <a
                 href="mailto:storenye263@gmail.com"
-                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Mail className="text-white" />

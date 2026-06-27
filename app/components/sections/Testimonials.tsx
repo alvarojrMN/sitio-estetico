@@ -38,10 +38,6 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
 
-          <p className="text-[#4D5B46] font-medium mb-4">
-            Testimonios
-          </p>
-
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E2E2E] leading-tight mb-6">
             Lo que dicen nuestras clientes
           </h2>

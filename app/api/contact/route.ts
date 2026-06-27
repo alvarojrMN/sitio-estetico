@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, phone, service } = body;
+    const { name, email, phone, service, date, hour } = body;
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
@@ -20,6 +20,8 @@ export async function POST(req: Request) {
         <p><strong>Correo:</strong> ${email}</p>
         <p><strong>Teléfono:</strong> ${phone}</p>
         <p><strong>Servicio:</strong> ${service}</p>
+        <p><strong>Fecha solicitada:</strong> ${date}</p>
+        <p><strong>Hora solicitada:</strong> ${hour}</p>
       `,
     });
 

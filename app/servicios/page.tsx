@@ -1,4 +1,5 @@
 import Navbar from "../components/layout/Navbar";
+import Contact from "../components/sections/Contact";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -121,10 +122,6 @@ export default function ServiciosPage() {
 
         <div className="max-w-7xl mx-auto text-center">
 
-          <p className="text-[#4D5B46] font-medium mb-4">
-            Catálogo de Servicios
-          </p>
-
           <h1 className="text-5xl sm:text-6xl font-bold text-[#2E2E2E] mb-6">
             Todos nuestros tratamientos
           </h1>
@@ -201,6 +198,7 @@ export default function ServiciosPage() {
         </div>
 
       </section>
+      <Contact />
 
     </main>
   );

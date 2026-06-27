@@ -48,11 +48,6 @@ export default function About() {
         {/* CONTENT SIDE */}
         <div>
 
-          {/* Small title */}
-          <p className="text-[#4D5B46] font-medium mb-4">
-            Sobre Nosotros
-          </p>
-
           {/* Main title */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E2E2E] leading-tight mb-8">
             Cuidamos tu belleza con tecnología y experiencia

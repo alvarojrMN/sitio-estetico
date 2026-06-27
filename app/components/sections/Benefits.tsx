@@ -44,10 +44,6 @@ export default function Benefits() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
 
-          <p className="text-[#4D5B46] font-medium mb-4">
-            ¿Por qué elegirnos?
-          </p>
-
           <h2 className="text-4xl sm:text-5xl font-bold text-[#2E2E2E] mb-6">
             Experiencia premium en estética y bienestar
           </h2>

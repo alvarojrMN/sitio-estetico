@@ -47,7 +47,7 @@ export default function AboutPage() {
             </p>
 
             <h2 className="text-4xl font-bold text-[#4D5B46] mb-8">
-              Dra. Marcela Niño
+              Marcela Niño Especialista
             </h2>
 
             <p className="text-[#6B6B6B] text-lg leading-relaxed mb-10">
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-[#6B6B6B] text-lg leading-relaxed">
-              Nuestra clínica nació con el propósito de ofrecer
+              Nuestra estetica nació con el propósito de ofrecer
               tratamientos estéticos modernos, seguros y personalizados.
               Creemos que cada paciente merece una atención exclusiva,
               enfocada en potenciar su belleza natural y mejorar su calidad

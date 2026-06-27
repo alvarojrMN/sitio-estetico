@@ -14,7 +14,7 @@ const services = [
     title: "Skin Care Avanzado",
     description:
       "Protocolos modernos enfocados en hidratación y luminosidad.",
-    image: "/Skin.jpg",
+    image: "/skin.jpg",
   },
 
   {
@@ -37,10 +37,6 @@ export default function Services() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
 
           <div className="max-w-3xl">
-
-            <p className="text-[#4D5B46] font-medium mb-4">
-              Nuestros Procedimientos
-            </p>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E2E2E] leading-tight mb-6">
               Tratamientos estéticos diseñados para ti

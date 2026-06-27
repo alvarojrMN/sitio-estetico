@@ -15,6 +15,8 @@ export default function Contact() {
   email: "",
   phone: "",
   service: "",
+  date:"",
+  hour:"",
 });
 
 const [loading, setLoading] = useState(false);
@@ -54,6 +56,8 @@ const handleSubmit = async (
         email: "",
         phone: "",
         service: "",
+        date:"",
+        hour:"",
       });
     } else {
       setMessage("Ocurrió un error al enviar la solicitud.");
@@ -75,10 +79,6 @@ const handleSubmit = async (
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-
-          <p className="text-[#4D5B46] font-medium mb-4">
-            Contacto
-          </p>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2E2E2E] leading-tight mb-6">
             Agenda tu experiencia premium
@@ -104,82 +104,80 @@ const handleSubmit = async (
             <div className="space-y-8">
 
               {/* Item */}
-              <div className="flex gap-5">
-
+              <a
+                href="https://maps.google.com/?q=Cra 70c #57r Sur-27, Bogotá"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <MapPin className="text-white" />
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1">
+                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Dirección
                   </h4>
 
-                 <a
-                    href="https://maps.google.com/?q=Cra 70c #57r Sur-27, Bogotá"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
-                  >
-                     Cra. 70c #57r Sur-27, Bogotá, Colombia
-                  </a>
+                  <p className="text-[#6B6B6B]">
+                    Cra. 70c #57r Sur-27, Bogotá, Colombia
+                  </p>
                 </div>
-
-              </div>
+              </a>
 
               {/* Item */}
-              <div className="flex gap-5">
-
+              <a
+                href="tel:+573124333517"
+                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Phone className="text-white" />
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1">
+                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Teléfono
                   </h4>
 
-                  <a
-                    href="tel:+573124333517"
-                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
-                  >
+                  <p className="text-[#6B6B6B]">
                     +57 312 433 3517
-                  </a>
+                  </p>
                 </div>
-
-              </div>
+              </a>
 
               {/* Item */}
-              <div className="flex gap-5">
-
+              <a
+                href="mailto:storenye263@gmail.com"
+                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Mail className="text-white" />
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1">
+                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Correo
                   </h4>
 
-                  <a
-                    href="mailto:storenye263@gmail.com"
-                    className="text-[#6B6B6B] hover:text-[#4D5B46]"
-                  >
-                    storenye263@gmail.com               
-                   </a>
+                  <p className="text-[#6B6B6B]">
+                    storenye263@gmail.com
+                  </p>
                 </div>
-
-              </div>
+              </a>
             
               {/* Item */}
-              <div className="flex gap-5">
-
+              <a
+                href="https://wa.me/573124333517"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Clock3 className="text-white" />
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1">
+                  <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Horarios
                   </h4>
 
@@ -187,9 +185,7 @@ const handleSubmit = async (
                     Lunes a Sábado — 8:00 AM a 7:00 PM
                   </p>
                 </div>
-
-              </div>
-
+              </a>
             </div>
 
             {/* Socials */}
@@ -204,7 +200,8 @@ const handleSubmit = async (
              <FaInstagram className="text-white" />
               </a>
               <a
-                  href="https://facebook.com/Marce Diaz"
+                  href="https://facebook.com/@marce.diaz.1976
+"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 rounded-full bg-[#4D5B46] hover:bg-[#3E4A38] flex items-center justify-center transition duration-300"
@@ -309,6 +306,44 @@ const handleSubmit = async (
                   </option>
                 </select>
               </div>
+
+              {/* Fecha */}
+              <div>
+                <input
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                />
+              </div>
+
+              {/* Hora */}
+                <div>
+                  <select
+                    name="hour"
+                    value={formData.hour}
+                    onChange={handleChange}
+                    className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                  >
+                    <option value="" disabled>
+                      Selecciona una hora
+                    </option>
+
+                    <option value="08:00 AM">08:00 AM</option>
+                    <option value="09:00 AM">09:00 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                    <option value="05:00 PM">05:00 PM</option>
+                    <option value="06:00 PM">06:00 PM</option>
+                    <option value="07:00 PM">07:00 PM</option>
+                  </select>
+                </div>
 
               {/* Button */}
               <button

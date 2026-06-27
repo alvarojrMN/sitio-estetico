@@ -92,11 +92,9 @@ const handleSubmit = async (
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12">
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 overflow-hidden">
           {/* Left Side */}
-          <div className="bg-white rounded-[40px] p-10 shadow-sm border border-[#E8DED1]">
-
+          <div className="bg-white rounded-[30px] md:rounded-[40px] p-6 md:p-8 lg:p-10 shadow-sm border border-[#E8DED1] overflow-hidden">
             <h3 className="text-3xl font-bold text-[#2E2E2E] mb-10">
               Información de contacto
             </h3>
@@ -108,13 +106,14 @@ const handleSubmit = async (
                 href="https://maps.google.com/?q=Cra 70c #57r Sur-27, Bogotá"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex items-start gap-4 md:gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <MapPin className="text-white" />
                 </div>
 
-                <div>
+                <div className="min-w-0">
+                
                   <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Dirección
                   </h4>
@@ -128,13 +127,14 @@ const handleSubmit = async (
               {/* Item */}
               <a
                 href="tel:+573124333517"
-                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex items-start gap-4 md:gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Phone className="text-white" />
                 </div>
 
-                <div>
+                <div className="min-w-0">
+                
                   <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Teléfono
                   </h4>
@@ -148,13 +148,14 @@ const handleSubmit = async (
               {/* Item */}
               <a
                 href="mailto:storenye263@gmail.com"
-                className="flex gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex items-start gap-4 md:gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Mail className="text-white" />
                 </div>
 
-                <div>
+                 <div className="min-w-0">
+                
                   <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Correo
                   </h4>
@@ -168,15 +169,17 @@ const handleSubmit = async (
               {/* Item */}
               <a
                 href="https://wa.me/573124333517"
+
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-5 p-4 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
+                className="flex items-start gap-4 md:gap-5 rounded-3xl hover:bg-[#F7F3EE] transition duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#4D5B46] flex items-center justify-center shrink-0">
                   <Clock3 className="text-white" />
                 </div>
 
-                <div>
+                <div className="min-w-0">
+                
                   <h4 className="text-xl font-semibold text-[#2E2E2E] mb-1 group-hover:text-[#4D5B46]">
                     Horarios
                   </h4>
@@ -214,8 +217,7 @@ const handleSubmit = async (
           </div>
 
           {/* Right Side - Form */}
-          <div className="bg-white rounded-[40px] p-10 shadow-sm border border-[#E8DED1]">
-
+          <div className="bg-white rounded-[30px] md:rounded-[40px] p-6 md:p-8 lg:p-10 shadow-sm border border-[#E8DED1] overflow-hidden">
             <h3 className="text-3xl font-bold text-[#2E2E2E] mb-10">
               Solicita una cita
             </h3>
@@ -230,7 +232,7 @@ const handleSubmit = async (
                   onChange={handleChange}
                   placeholder="Nombre completo"
                   required
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
                 />
               </div>
 
@@ -243,7 +245,7 @@ const handleSubmit = async (
                   onChange={handleChange}
                   placeholder="Correo electrónico"
                   required
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
                 />
               </div>
 
@@ -256,7 +258,7 @@ const handleSubmit = async (
                 onChange={handleChange}
                 placeholder="Número telefónico"
                 required
-                className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
               />
               </div>
 
@@ -267,7 +269,7 @@ const handleSubmit = async (
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
                 >
                   <option value="" disabled>
                     Selecciona un servicio
@@ -314,7 +316,7 @@ const handleSubmit = async (
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                  className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
                 />
               </div>
 
@@ -324,7 +326,7 @@ const handleSubmit = async (
                     name="hour"
                     value={formData.hour}
                     onChange={handleChange}
-                    className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-6 py-5 outline-none focus:border-[#4D5B46] transition"
+                    className="w-full bg-[#F7F3EE] border border-[#E8DED1] rounded-2xl px-4 md:px-6 py-4 md:py-5 outline-none focus:border-[#4D5B46] transition"
                   >
                     <option value="" disabled>
                       Selecciona una hora
@@ -349,8 +351,7 @@ const handleSubmit = async (
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#4D5B46] hover:bg-[#3E4A38] disabled:opacity-60 text-white py-5 rounded-2xl transition duration-300 text-lg"
-              >
+                className="w-full bg-[#4D5B46] hover:bg-[#3E4A38] disabled:opacity-60 text-white py-4 md:py-5 rounded-2xl transition duration-300 text-base md:text-lg"              >
                 {loading ? "Enviando..." : "Enviar solicitud"}
               </button>
               {message && (
